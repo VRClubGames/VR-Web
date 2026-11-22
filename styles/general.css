@@ -14,6 +14,7 @@ body {
     font-family: "Montserrat", sans-serif;
     background-color: #09081A;
     background-image: url(../images/general/background.png);
+    background-size: 100%;
 }
 
 /* контейнер */
@@ -34,8 +35,13 @@ body {
 .navigation {
     height: 71px;
 
+    z-index: 1;
     position: sticky;
     top: 0;
+    /* left: 50%; */
+    /* transform: translate(-50%, -0%); */
+    /* position: fixed; */
+    /* left: 0%; */
     backdrop-filter: blur(13px);
 
     display: flex;
@@ -64,3 +70,83 @@ body {
 }
 
 /* ссылки на организации */
+.organizations-links {
+    display: flex;
+    gap: 25px;
+}
+
+.organizations-links__item.digital-laboratory {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.digital-laboratory__link {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.digital-laboratory__line.line1 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.digital-laboratory__line.line2 {
+    font-size: 8px;
+    font-size: 200;
+    letter-spacing: 1px;
+}
+
+.digital-laboratory__line.line3 {
+    font-size: 5px;
+    letter-spacing: 1px;
+}
+
+/* *** Шапка *** */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 71px;
+    margin-top: -71px;
+
+    background:
+    url(../images/general/header/header-beam.png) center / 100% no-repeat,
+    url(../images/general/header/header-gradient.png) center / 100% no-repeat,
+    #0E102B;
+}
+
+.header__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.header__eyebrow {
+    font-size: 14px;
+    font-weight: 500;
+    color: #DADADA;
+}
+
+.header__title {
+    line-height: 100%;
+
+    font-size: 64px;
+    font-weight: 800;
+    color: #FBFBFB;
+    text-transform: uppercase;
+}
+
+.header__title.accent {
+    color: #D099FD;
+}
+
+.header__description {
+    width: calc(100% - 7vw);
+    letter-spacing: -4%;
+}
