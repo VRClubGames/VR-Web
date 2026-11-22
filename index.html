@@ -2,14 +2,13 @@
 <html lang="ru">
 
 <head>
-
     <!-- Метаданные -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Вкладка -->
     <title>VR-CLUB — Главная</title>
-    <link rel="icon" href="">
+    <link rel="icon" href="./images/general/favicon.png">
 
     <!-- Подключаемые файлы -->
     <link rel="stylesheet" href="./styles/reset.css">
@@ -20,171 +19,185 @@
 
     <!-- Навигация -->
     <nav class="wrapper navigation">
-        <ul>
-            <li><img src="" alt=""></li>
-            <li><a href="">игры</a></li>
-            <li><a href="">о нас</a></li>
-            <li><a href="">форма</a></li>
-        </ul>
-        <ul>
-            <li>
-                <img src="" alt="">
-                <div>
-                    <a href="">
-                        <span>Лаборатория</span><br/>
-                        <span>цифровых решений</span><br/>
-                        <span>[ПРОМТЕХДИЗАЙН]</span>
-                    </a>
-                </div>
+        <!-- ссылки на страницы -->
+        <ul class="page-links">
+            <li class="page-links__item"><a href="./index.html"><img class="navigation-logo" src="./images/general/nav/navigation-logo.png" alt="логотип навигации"></a></li>
+            <li class="page-links__item dropdown">
+                <a href="">игры</a>
+                <img src="./images/general/dropdown-icon.png">
             </li>
-            <li><a href=""><img src="" alt=""></a></li>
+            <li class="page-links__item"><a href="">о нас</a></li>
+            <li class="page-links__item"><a href="">форма</a></li>
+        </ul>
+
+        <!-- ссылки на организации -->
+        <ul class="organizations-links">
+            <li class="organizations-links__item digital-laboratory">
+                <img class="digital-laboratory__icon" src="./images/general/nav/digital-laboratory-logo.png" alt="лаборатория цифровых решений">
+                <a class="digital-laboratory__link" href="https://sutd.ru/universitet/structure/departments/1619" target="_blank">
+                    <span class="digital-laboratory__line line1">Лаборатория</span><br/>
+                    <span class="digital-laboratory__line line2">цифровых решений</span><br/>
+                    <span class="digital-laboratory__line line3">[ПРОМТЕХДИЗАЙН]</span>
+                </a>
+            </li>
+
+            <li class="organizations-links__item spbguptd">
+                <a class="spbguptd__link" href="https://sutd.ru/" target="_blank">
+                    <img src="./images/general/nav/spbguptd-logo.png" alt="спбгуптд">
+                </a>
+            </li>
         </ul>
     </nav>
 
     <!-- Шапка -->
-    <header class="wrapper">
+    <header class="wrapper header">
         <!-- фон -->
-        <div>
+        <div class="header__background">
 
             <!-- карта -->
-            <div>
-                <span>VR CLUB</span>
-                <h1>КЛУБ ВИРТУАЛЬНОЙ
-                    реальности</h1>
-                <p>Клуб дизайна и разработки виртуальной реальности — это пространство для экспериментов, обучения и
-                    создания собственных VR-проектов. Здесь участники не просто знакомятся с виртуальной реальностью, а
-                    учатся работать с ней на практике.</p>
-                <a href="">→ подробнее</a>
-                <a href="">новости</a>
-            </div>
-        </div>
+            <div class="header__box">
+                <span class="header__eyebrow">VR CLUB</span>
+                <h1 class="header__title">КЛУБ ВИРТУАЛЬНОЙ<br/>реальности</h1>
+                <p class="header__description">Обменивайтесь опытом, находите партнеров в проекты и создавайте будущее виртуальных миров вместе!</p>
 
-        <!-- фон -->
-        <div>
-
-            <!-- карта -->
-            <div>
-                <h2>ЧТО МЫ ИЗУЧАЕМ?</h2>
-
-
-                <div>
-                    <img src="" alt="">
-                    <p>VR-разработки, дизайн и левелдизайн, принципы UX и UI в виртуальной реальности, а также работу с
-                        игровым движком Unity. Все созданные сцены и игры тестируются в шлемах Oculus Quest 2.</p>
+                <div class="header__links">
+                    <a class="header__link_more" href="">→ подробнее</a>
+                    <a class="header__link_news" href="">новости</a>
                 </div>
             </div>
 
-
+            <!-- дракон -->
+            <img src="./images/general/header/header-image.png" alt="дракон">
         </div>
-
     </header>
 
     <!-- Содерджимое -->
     <main class="wrapper">
 
         <!-- Новости -->
-        <section>
-            <h3>Пооследние новости</h3>
-            <div>
+        <section class="news-section">
+            <h2 class="news-section__title">Последние новости</h2>
+            
+            <div class="news-section__cards">
                 <!-- Большая карта -->
-                <div>
-                    <img src="" alt="">
-                    <h1>ВИАР-клуб на VK Fest з</h1>
-                    <span>14 июля 2026</span>
-                </div>
-
+                <article class="news-section__biggest news-card news-card_biggest">
+                    <a class="news-card__link" href="">
+                        <img class="news-card__image" src="" alt="">
+                        <h3 class="news-card__title">ВИАР-клуб на VK Fest з</h3>
+                        <span class="news-card__date">14 июля 2026</span>
+                    </a>
+                </article>
 
                 <!-- Список карт -->
-                <ul>
-                    <li>
-                        <a href="">
-                            <div>
-                                <h1>Продолжаем изучать Unreal Engine!</h1>
-                                <span>14 Июля</span>
-                            </div>
-                            <img src="" alt="">
-                        </a>
+                <ul class="news-section__list">
+                    <li class="news-section__item">
+                        <article class="news-card news-card_smallest">
+                            <a class="news-card__link" href="">
+                                <div class="news-card__body">
+                                    <h3 class="news-card__title">Продолжаем изучать Unreal Engine!</h3>
+                                    <span class="news-card__date">14 Июля</span>
+                                </div>
+                                <img class="news-card__image" src="" alt="">
+                            </a>
+                        </article>
                     </li>
-                    <li>
-                        <a href="">
-                            <div>
-                                <h1>Виар-клубу год!</h1>
-                                <span>16 июня</span>
-                            </div>
-                            <img src="" alt="">
-                        </a>
+
+                    <li class="news-section__item">
+                        <article class="news-card news-card_smallest">
+                            <a class="news-card__link" href="">
+                                <div class="news-card__body">
+                                    <h3 class="news-card__title">Виар-клубу год!</h3>
+                                    <span class="news-card__date">16 июня</span>
+                                </div>
+                                <img class="news-card__image" src="" alt="">
+                            </a>
+                        </article>
                     </li>
-                    <li>
-                        <a href="">
-                            <div>
-                                <h1>У VR-клуба появились свои карточки!</h1>
-                                <span>16 Октября</span>
-                            </div>
-                            <img src="" alt="">
-                        </a>
+
+                    <li class="news-section__item">
+                        <article class="news-card news-card_smallest">
+                            <a class="news-card__link" href="">
+                                <div class="news-card__body">
+                                    <h3 class="news-card__title">У VR-клуба появились свои карточки!</h3>
+                                    <span class="news-card__date">16 Октября</span>
+                                </div>
+                                <img class="news-card__image" src="" alt="">
+                            </a>
+                        </article>
                     </li>
-                    <li>
-                        <a href="">
-                            <div>
-                                <h1>Мы были на ВК-фесте в зоне технологий</h1>
-                                <span>9 Июля</span>
-                            </div>
-                            <img src="" alt="">
-                        </a>
+
+                    <li class="news-section__item">
+                        <article class="news-card news-card_smallest">
+                            <a class="news-card__link" href="">
+                                <div class="news-card__body">
+                                    <h3 class="news-card__title">Мы были на ВК-фесте в зоне технологий</h3>
+                                    <span class="news-card__date">9 Июля</span>
+                                </div>
+                                <img class="news-card__image" src="" alt="">
+                            </a>
+                        </article>
                     </li>
                 </ul>
+
             </div>
         </section>
 
         <!-- Наши разработки -->
-        <section>
-            <h3>Наши разработки</h3>
-            <ul>
-                <li>
-                    <h1>PROMTECHDESIGN
-                        RUNNER</h1>
+        <section class="games-section">
+            <h3 class="games-section__title">Наши разработки</h3>
+            <ul class="games-section__list">
+                <li class="games-section__item">
+                    <h3>PROMTECHDESIGN
+                        RUNNER</h3>
                 </li>
                 <li>
-                    <h1>ИГРА 2</h1>
+                    <h3>ИГРА 2</h3>
                 </li>
                 <li>
-                    <h1>ИГРА 3</h1>
+                    <h3>ИГРА 3</h3>
                 </li>
                 <li>
-                    <h1></h1>
+                    <h3></h3>
                 </li>
             </ul>
         </section>
 
         <!-- Присоединяйтесь к нам! -->
-        <section>
-            <div>
-                <h3>Присоединяйтесь к нам!</h3>
-                <p>
+        <section class="join-us">
+            <div class="join-us__container">
+                <h3 class="join-us__title">Присоединяйтесь к нам!</h3>
+                <p class="join-us__description">
                     Научим особенностям дизайна
                     и покажем, как создавать свои проекты
                     в виртуальной реальности
                 </p>
-                <a href="">ИНТЕРЕСНО</a>
+                <a class="join-us__button" href="">ИНТЕРЕСНО</a>
             </div>
             
-            <div>
-                <img src="" alt="">
-            </div>
+            <img class="join-us__image" src="" alt="наш клуб">
         </section>
     </main>
 
     <!-- Подвал -->
-    <footer class="wrapper">
-        <ul>
-            <li><a href="">ВИАР КЛУБ</a></li>
-            <li><a href="">2026, все права защищены</a></li>
-            <li><a href=""><img src="" alt=""> Вознесенкский 44-46</a></li>
+    <footer class="wrapper footer">
+        <!-- ссылки на страницы -->
+        <ul class="footer__list footer__list_pages">
+            <li class="footer__item"><a class="footer__link footer__link_main" href="">ВИАР КЛУБ</a></li>
+            <li class="footer__item"><a class="footer__link" href="">О НАС</a></li>
+            <li class="footer__item"><a class="footer__link" href="">ФОРМА</a></li>
+            <li class="footer__item"><a class="footer__link" href="">ИГРЫ</a></li>
         </ul>
-        <ul>
-            <li><a href="">НАША ГРУППА</a></li>
-            <li><a href=""><img src="" alt=""></a></li>
-            <li><a href=""><img src="" alt=""></a></li>
+
+        <!-- ссылки на остальную информацию -->
+        <ul class="footer__list footer__list_info">
+            <li class="footer__item"><a class="footer__link" href="">2026, все права защищены</a></li>
+            <li class="footer__item"><a class="footer__link" href=""><img class="footer__image" src="" alt="местоположение"> Вознесенкский 44-46</a></li>
+
+            <li class="footer__item">
+                <a class="footer__link" href="">НАША ГРУППА</a>
+                <a class="footer__link" href=""><img class="footer__image" src="" alt="вк"></a>
+                <a class="footer__link" href=""><img class="footer__image" src="" alt="телеграм"></a>
+            </li>
         </ul>
     </footer>
 </body>

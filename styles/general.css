@@ -1,3 +1,5 @@
+/* *** Общие стили *** */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -7,21 +9,58 @@
 body {
     display: flex;
     flex-wrap: wrap;
-
-    background-color: #09081A;
+    
+    color: #EDEDE9;
     font-family: "Montserrat", sans-serif;
+    background-color: #09081A;
+    background-image: url(../images/general/background.png);
 }
 
+/* контейнер */
 .wrapper {
-    width: calc(1506px + 1.3vw);
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+
+    width: calc(1580px + 3.5vw);
     min-width: 320px;
     /* justify-self: center; */
     margin: auto; /* временно */
-    padding: 0 1.3vw;
-    border: rgb(162, 0, 255) 1px solid;
-    
+    padding: 0 3.5vw;
+    border: rgb(162, 0, 255) 1px solid; border-top: none; border-bottom: none;
 }
 
+/* *** Навигация *** */
 .navigation {
-    
+    height: 71px;
+
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(13px);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+
+/* ссылки на страницы */
+.page-links {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+}
+
+.page-links__item {
+    color: #EDEDE9;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.page-links__item.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+/* ссылки на организации */
