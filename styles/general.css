@@ -6,8 +6,30 @@
     font-family: inherit;
 }
 
+::selection {
+  background: #e88dff;
+  color: #f8f8f8;
+  text-shadow: none;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1d0e41;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #724ea1;
+  border-radius: 4px;
+}
+
 body {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     
     color: #EDEDE9;
@@ -21,27 +43,29 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 10vh;
 
     width: calc(1580px + 3.5vw);
     min-width: 320px;
     /* justify-self: center; */
     margin: auto; /* временно */
     padding: 0 3.5vw;
-    border: rgb(162, 0, 255) 1px solid; border-top: none; border-bottom: none;
+    /* border: rgb(162, 0, 255) 1px solid; border-top: none; border-bottom: none; */
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
 }
 
 /* *** Навигация *** */
 .navigation {
-    height: 71px;
+    height: 81px;
 
     z-index: 1;
     position: sticky;
     top: 0;
-    /* left: 50%; */
-    /* transform: translate(-50%, -0%); */
-    /* position: fixed; */
-    /* left: 0%; */
     backdrop-filter: blur(13px);
 
     display: flex;
@@ -61,6 +85,7 @@ body {
     color: #EDEDE9;
     font-size: 16px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .page-links__item.dropdown {
@@ -68,6 +93,21 @@ body {
     align-items: center;
     gap: 9px;
 }
+
+.navigation-logo {
+    margin-right: 10px;
+}
+
+/* анимация при наведении */
+.page-link {
+    transition: 0.1s;
+}
+
+.page-link:hover {
+    color: #c5b3f0;
+    transition: 0.15s;
+}
+
 
 /* ссылки на организации */
 .organizations-links {
@@ -111,16 +151,20 @@ body {
 .header {
     display: flex;
     flex-direction: row;
-    padding-top: 71px;
-    margin-top: -71px;
+    padding-top: 81px;
+    margin-top: -65px;
 
     background:
     url(../images/general/header/header-beam.png) center / 100% no-repeat,
     url(../images/general/header/header-gradient.png) center / 100% no-repeat,
     #0E102B;
+    border-radius: 25px;
 }
 
 .header__body {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,7 +173,7 @@ body {
 
 .header__eyebrow {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     color: #DADADA;
 }
 
@@ -148,5 +192,199 @@ body {
 
 .header__description {
     width: calc(100% - 7vw);
-    letter-spacing: -4%;
+    font-size: 20px;
+    font-weight: 600;
+    /* letter-spacing: -4%; */
+    color: #dddddd;
+}
+
+/* Кнопки шапки */
+.header__links {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header__link {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.header__link.header__link_more {
+    max-width: 217px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 37px;
+
+    border: 2px solid #FA879F;
+    border-radius: 13px;
+}
+
+.header__link.header__link_news {
+    color: #FA879F;
+    /* text-underline-offset: 5px; */
+    text-decoration-line: underline;
+    text-underline-offset: 50%;
+}
+
+/* Зверушка */
+.header__image {
+    align-self: flex-end;
+}
+
+/* *** Новости *** */
+
+.news-section {
+    margin-top: 10vh;
+    padding-top: 39px;
+    padding-bottom: 57px;
+
+    background-image: url(../images/general/news/news-background.png);
+    background-size: 100%;
+    background-position: center;
+
+    border-radius: 25px;
+}
+
+.news-section__title {
+    margin-bottom: 35px;
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.news-section__cards.card-container {
+    display: grid;
+    grid-template-columns: 83fr 58fr;
+    gap: 24px;
+    
+}
+
+/* главная (большая) карточка */
+.news-section__card_main .news-card__link {
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 19px;
+    transition: 0.15s;
+}
+
+.news-section__card_main:hover .news-card__link {
+    filter: brightness(105%);
+    transition: 0.15s;
+}
+
+.news-section__card_main .news-card__title {
+    margin-top: 25px;
+
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    color: #EDEDE9;
+}
+
+.news-card__date {
+    margin-top: 11px;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #FA879F;
+}
+
+/* колона карточек (маленькие) */
+.news-section__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.news-section__card_mini .news-card__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 117px;
+    padding-left: 26px;
+
+    border-radius: 19px;
+    background-color: #3F375B80;
+    transition: 0.15;
+}
+
+.news-section__card_mini:hover .news-card__link {
+    background-color: #50486e80;
+    filter: brightness(105%);
+    transition: 0.15s;
+}
+
+.news-section__card_mini .news-card__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.news-section__card_mini .news-card__title {
+    padding-right: 10%;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.news-section__card_mini .news-card__image {
+    margin: 9px;
+}
+
+/* *** Подвал *** */
+
+.footer {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 35px;
+
+    text-transform: uppercase;
+}
+
+.footer__list.footer__list_pages {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.footer__list_pages .footer__link {
+    font-size: 16px;
+}
+
+.footer__list_pages .footer__link.footer__link_main {
+    font-weight: 600;
+}
+
+.footer__list.footer__list_info {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    gap: 45px;
+}
+
+.footer__item.footer__item_geo .footer__link {
+    display: flex;
+    gap: 9px;
+}
+
+.footer__item_social {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 9px;
+}
+
+.footer__link:hover {
+    color: #f3f3f3;
+    filter:brightness(110%) ;
 }
