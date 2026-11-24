@@ -1,0 +1,373 @@
+/* *** Шапка *** */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 81px;
+    margin-top: -65px;
+
+    background:
+    url(../images/general/header/header-beam.png) center / cover no-repeat,
+    url(../images/general/header/header-gradient.png) center / cover no-repeat,
+    #0E102B;
+    border-radius: 25px;
+}
+
+.header__body {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.header__eyebrow {
+    font-size: 14px;
+    font-weight: 600;
+    color: #DADADA;
+}
+
+.header__title {
+    line-height: 100%;
+
+    font-size: 64px;
+    font-weight: 800;
+    color: #FBFBFB;
+    text-transform: uppercase;
+}
+
+.header__title.accent {
+    color: #D099FD;
+}
+
+.header__description {
+    width: calc(100% - 7vw);
+    font-size: 20px;
+    font-weight: 600;
+    /* letter-spacing: -4%; */
+    color: #dddddd;
+}
+
+/* Кнопки шапки */
+.header__links {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header__link {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.header__link.header__link_more {
+    max-width: 217px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 37px;
+
+    border: 2px solid #FA879F;
+    
+    border-radius: 33px;
+    transition: 0.3s;
+}
+
+.header__link.header__link_more:hover {
+    background-color: #e97f96;
+    border-color: #e97f96;
+    border-radius: 3px;
+    transition: 0.2s;
+    transition-delay: 0.04s;
+    color: white;
+}
+
+.header__link.header__link_news {
+    color: #FA879F;
+    /* text-underline-offset: 5px; */
+    text-decoration-line: underline;
+    text-underline-offset: 50%;
+    transition: 0.15s;
+}
+
+.header__link.header__link_news:hover {
+    filter: brightness(110%);
+    transition: 0.15s;
+}
+
+/* Зверушка */
+.header__image {
+    align-self: flex-end;
+}
+
+/* *** Игры *** */
+
+.games-section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    /* padding: 0; */
+    padding-top: 51px; padding-bottom: 122px;
+    margin-top: 10vh;
+
+    border-radius: 25px;
+    background-color: #593E6E20;
+}
+
+.games-section__title {
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.games-section__list.game-container {
+    display: flex;
+    /* align-items: flex-start; */
+    gap: 33px;
+
+    overflow-y: visible;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.games-section__list.game-container::-webkit-scrollbar {
+    display: none;
+}
+
+.games-section__item {
+    width: 63%;
+    height: 40vh;
+
+    border-radius: 25px;
+    transform: skewX(-12deg);
+    overflow: hidden;
+
+    transition: 0.15s;
+}
+
+.games-section__item:hover {
+    filter: brightness(105%);
+    transform: skew(15deg);
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+.games-section__item:hover .games-section__text {
+    transform: skewX(-15deg); 
+}
+
+.runner-image {
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 50%, rgba(35, 27, 54, 0.85) 100%),
+    url(../images/main/games/games-runner.png) center / cover no-repeat;
+}
+
+.finditem-image {
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 50%, rgba(35, 27, 54, 0.85) 100%),
+    url(../images/main/games/games-finditem.png) center / cover no-repeat;
+}
+
+.hitemole-image {
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 50%, rgba(35, 27, 54, 0.85) 100%),
+    url(../images/main/games/games-hitmole.png) center / cover no-repeat;
+}
+
+.graffiti-image {
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 50%, rgba(35, 27, 54, 0.85) 100%),
+    url(../images/main/games/games-graffiti.png) center / cover no-repeat;
+}
+
+.games-section__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transform: skewX(12deg) scale(1.3);
+}
+
+.games-section__text {
+    z-index: 1;
+    position: absolute;
+    bottom: 30px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    text-align: center;
+
+    font-size: 24px;
+    font-weight: 500;
+    color: #e9e4f5;
+
+    transform: skewX(12deg); 
+}
+
+/* *** Новости *** */
+
+.news-section {
+    /* margin-top: 10vh; */
+    padding-top: 39px;
+    padding-bottom: 57px;
+
+    background:
+    /* url(../images/main/section-background.png) center / cover no-repeat, */
+    #593E6E20;
+
+    border-radius: 25px;
+}
+
+.news-section__title {
+    margin-bottom: 35px;
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.news-section__cards.card-container {
+    display: grid;
+    grid-template-columns: 83fr 58fr;
+    gap: 24px;
+    
+}
+
+/* главная (большая) карточка */
+.news-section__card_main .news-card__link {
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 19px;
+    transition: 0.15s;
+}
+
+.news-section__card_main:hover .news-card__link {
+    filter: brightness(105%);
+    transition: 0.15s;
+}
+
+.news-section__card_main .news-card__title {
+    margin-top: 25px;
+
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    color: #EDEDE9;
+}
+
+.news-card__date {
+    margin-top: 11px;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #FA879F;
+}
+
+/* колона карточек (маленькие) */
+.news-section__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.news-section__card_mini .news-card__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 117px;
+    padding-left: 26px;
+
+    border-radius: 19px;
+    background-color: #3F375B80;
+    transition: 0.15;
+}
+
+.news-section__card_mini:hover .news-card__link {
+    background-color: #50486e80;
+    filter: brightness(105%);
+    transition: 0.15s;
+}
+
+.news-section__card_mini .news-card__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.news-section__card_mini .news-card__title {
+    padding-right: 10%;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.news-section__card_mini .news-card__image {
+    margin: 9px;
+}
+
+/* *** Присоединяйтесь к нам *** */
+
+.join-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-us__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 23px;
+    padding-top: 10vh;
+    padding-bottom: 12vh;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-image: url(../images/main/joinus/join-us-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.join-us__title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #E5E5E5;
+}
+
+.join-us__description {
+    font-size: 16px;
+    font-weight: 300;
+    color: #D099FD;
+}
+
+.join-us__button {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 16px 65px;
+    margin-top: 5px;
+
+    border: 1px solid #D9D9D9;
+    border-radius: 7px;
+    transition: 0.15s;
+}
+
+.join-us__button:hover {
+    background-color: #d7c9e220;
+    /* border: 1px solid #D099FD; */
+    transition: 0.15s;
+}

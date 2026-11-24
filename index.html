@@ -13,6 +13,7 @@
     <!-- Подключаемые файлы -->
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                 <img src="./images/general/dropdown-icon.png">
             </li>
             <li class="page-links__item"><a class="page-link" href="">о нас</a></li>
-            <li class="page-links__item"><a class="page-link" href="">форма</a></li>
+            <!-- <li class="page-links__item"><a class="page-link" href="">форма</a></li> -->
         </ul>
 
         <!-- ссылки на организации -->
@@ -63,7 +64,7 @@
                 виртуальных миров вместе!</p>
 
             <div class="header__links">
-                <a class="header__link header__link_more" href="">подробнее <img src="./images/general/header/header-arrow.png" alt=""></a>
+                <a class="header__link header__link_more" href="">подробнее <img src="./images/general/arrow.png" alt=""></a>
                 <a class="header__link header__link_news" href="">новости</a>
             </div>
         </div>
@@ -75,14 +76,41 @@
     <!-- Содерджимое -->
     <main class="main-container">
 
+        <!-- Наши разработки -->
+        <section class="wrapper games-section">
+            <h3 class="games-section__title">Наши проекты</h3>
+            <div class="games-section__slider">
+                <ul class="games-section__list game-container">
+                    <li class="games-section__item runner-image">
+                        <!-- <img class="games-section__image" src="./images/main/games/games-runner.png" alt="promtechdesign runner"> -->
+                        <h3 class="games-section__text">
+                            PROMTECHDESIGN RUNNER
+                        </h3>
+                    </li>
+                    <li class="games-section__item finditem-image">
+                        <!-- <img class="games-section__image" src="./images/main/games/games-finditem.png" alt="promtechdesign runner"> -->
+                        <h3 class="games-section__text">Find Item</h3>
+                    </li>
+                    <li class="games-section__item hitemole-image">
+                        <!-- <img class="games-section__image" src="./images/main/games/games-hitmole.png" alt="promtechdesign runner"> -->
+                        <h3 class="games-section__text">Hite Mole</h3>
+                    </li>
+                    <li class="games-section__item graffiti-image">
+                        <!-- <img class="games-section__image" src="./images/main/games/games-graffiti.png" alt="promtechdesign runner"> -->
+                        <h3 class="games-section__text">Graffiti</h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <!-- Новости -->
-        <!-- <section class="news-section wrapper">
+        <section class="news-section wrapper">
             <h2 class="news-section__title">Последние новости</h2>
 
             <div class="news-section__cards card-container">
                 <article class="news-section__card news-section__card_main">
                     <a class="news-card__link" href="">
-                        <img class="news-card__image" src="./images/general/news/news-card-main.png" alt="">
+                        <img class="news-card__image" src="./images/main/news/news-card-main.png" alt="">
                         <h3 class="news-card__title">ВИАР-клуб на VK Fest</h3>
                         <span class="news-card__date">14 июля 2026</span>
                     </a>
@@ -96,7 +124,7 @@
                                     <h3 class="news-card__title">Продолжаем изучать Unreal Engine!</h3>
                                     <span class="news-card__date">14 Июля</span>
                                 </div>
-                                <img class="news-card__image" src="./images/general/news/news-card-mini1.png" alt="">
+                                <img class="news-card__image" src="./images/main/news/news-card-mini1.png" alt="">
                             </a>
                         </article>
                     </li>
@@ -108,7 +136,7 @@
                                     <h3 class="news-card__title">Виар-клубу год!</h3>
                                     <span class="news-card__date">16 июня</span>
                                 </div>
-                                <img class="news-card__image" src="./images/general/news/news-card-mini2.png" alt="">
+                                <img class="news-card__image" src="./images/main/news/news-card-mini2.png" alt="">
                             </a>
                         </article>
                     </li>
@@ -120,7 +148,7 @@
                                     <h3 class="news-card__title">У VR-клуба появились свои карточки!</h3>
                                     <span class="news-card__date">16 Октября</span>
                                 </div>
-                                <img class="news-card__image" src="./images/general/news/news-card-mini3.png" alt="">
+                                <img class="news-card__image" src="./images/main/news/news-card-mini3.png" alt="">
                             </a>
                         </article>
                     </li>
@@ -132,48 +160,30 @@
                                     <h3 class="news-card__title">Мы были на ВК-фесте в зоне технологий</h3>
                                     <span class="news-card__date">9 Июля</span>
                                 </div>
-                                <img class="news-card__image" src="./images/general/news/news-card-mini4.png" alt="">
+                                <img class="news-card__image" src="./images/main/news/news-card-mini4.png" alt="">
                             </a>
                         </article>
                     </li>
                 </ul>
 
             </div>
-        </section> -->
-
-        <!-- Наши разработки -->
-        <section class="games-section wrapper">
-            <h3 class="games-section__title">Наши разработки</h3>
-            <ul class="games-section__list">
-                <li class="games-section__item">
-                    <h3>PROMTECHDESIGN
-                        RUNNER</h3>
-                </li>
-                <li>
-                    <h3>ИГРА 2</h3>
-                </li>
-                <li>
-                    <h3>ИГРА 3</h3>
-                </li>
-                <li>
-                    <h3></h3>
-                </li>
-            </ul>
         </section>
+
+        
 
         <!-- Присоединяйтесь к нам! -->
         <section class="join-us wrapper">
             <div class="join-us__container">
                 <h3 class="join-us__title">Присоединяйтесь к нам!</h3>
                 <p class="join-us__description">
-                    Научим особенностям дизайна
-                    и покажем, как создавать свои проекты
+                    Научим особенностям дизайна<br/>
+                    и покажем, как создавать свои проекты<br/>
                     в виртуальной реальности
                 </p>
-                <a class="join-us__button" href="">ИНТЕРЕСНО</a>
+                <a class="join-us__button" href="">ПЕРЕЙТИ <img src="./images/general/arrow.png" alt=""></a>
             </div>
 
-            <img class="join-us__image" src="" alt="наш клуб">
+            <img class="join-us__image" src="./images/main/joinus/join-us-image.png" alt="наш клуб">
         </section>
     </main>
 
@@ -183,13 +193,12 @@
         <ul class="footer__list footer__list_pages">
             <li class="footer__item"><a class="footer__link footer__link_main" href="">ВИАР КЛУБ</a></li>
             <li class="footer__item"><a class="footer__link" href="">О НАС</a></li>
-            <li class="footer__item"><a class="footer__link" href="">ФОРМА</a></li>
-            <li class="footer__item"><a class="footer__link" href="">ИГРЫ</a></li>
+            <!-- <li class="footer__item"><a class="footer__link" href="">ФОРМА</a></li> -->
+            <li class="footer__item"><a class="footer__link footer__link_games" href="">ИГРЫ<img src="./images/general/dropdown-icon.png"></a></li>
         </ul>
 
         <!-- ссылки на остальную информацию -->
         <ul class="footer__list footer__list_info">
-            <li class="footer__item"><a class="footer__link" href="">2026</a></li>
             <li class="footer__item footer__item_geo">
                 <a class="footer__link" href="https://2gis.ru/spb/geo/5348660212671766">
                     <img 
@@ -203,10 +212,12 @@
 
             <li class="footer__item footer__item_social">
                 <a class="footer__link" href="">НАША ГРУППА</a>
-                <a class="footer__link" href=""><img class="footer__image" src="./images/general/footer/footer-social-vk.png" alt="вк"></a>
-                <a class="footer__link" href=""><img class="footer__image" src="./images/general/footer/footer-social-tg.png" alt="телеграм"></a>
+                <a class="footer__link" href="https://vk.ru/club233376655"><img class="footer__image" src="./images/general/footer/footer-social-vk.png" alt="вк"></a>
+                <a class="footer__link" href="https://t.me/vrsreda"><img class="footer__image" src="./images/general/footer/footer-social-tg.png" alt="телеграм"></a>
             </li>
         </ul>
+
+        <script src="./script.js"></script>
     </footer>
 </body>
 
